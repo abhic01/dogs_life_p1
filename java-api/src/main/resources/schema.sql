@@ -1,15 +1,7 @@
-CREATE TABLE Owners
-    (
-    owner_id int,
-    name int,
-    PRIMARY KEY (owner_id)
-    );
+DROP TABLE IF EXISTS dogs;
 
-CREATE TABLE Dogs
-    (
-    id int,
-    name varchar(50),
-    age int,
-    owner_id int,
-    FOREIGN KEY (owner_id) REFERENCES Owners(owner_id)
-    );
+CREATE TABLE dogs (
+    dog_id INT NOT NULL,
+    name VARCHAR(250) NOT NULL,
+    age INT NOT NULL
+);
