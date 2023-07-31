@@ -1,12 +1,9 @@
-package com.db.grad.javaapi.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMaimport org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class WelcomeController {
-
-  @GetMapping("/")
+public class Welc
+  @GetMapping("/status")
   public String getWelcome() {
     return "Dogs API is up and running!";
   }
