@@ -23,7 +23,7 @@ public class DogsHandlerTest
     public  void    add_a_dog_return_number_of_dogs_in_repo_is_one()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -41,7 +41,7 @@ public class DogsHandlerTest
     public  void    add_several_dogs_return_number_of_dogs_match_number_added()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -65,7 +65,7 @@ public class DogsHandlerTest
     public  void    add_dog_and_remove_dog_return_number_of_dogs_is_zero()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         long uniqueId = cut.addDog( theDog );
@@ -88,7 +88,7 @@ public class DogsHandlerTest
     public  void    add_dog_and_remove_dog_that_doess_not_exist_return_number_of_dogs_is_one()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         long uniqueId = cut.addDog( theDog );
@@ -111,7 +111,7 @@ public class DogsHandlerTest
     public  void    find_dog_by_valid_id_returns_one_dog()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -135,7 +135,7 @@ public class DogsHandlerTest
     public  void    find_dog_by_invalid_id_returns_null_dog()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -158,7 +158,7 @@ public class DogsHandlerTest
     public  void    find_dog_by_name_returns_one_dog()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -184,7 +184,7 @@ public class DogsHandlerTest
     public  void    find_dog_by_name_returns_null_because_many_dogs_with_same_name()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -208,7 +208,7 @@ public class DogsHandlerTest
     public  void    find_dog_by_invalid_name_returns_null_dog()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
@@ -230,7 +230,7 @@ public class DogsHandlerTest
     public  void    update_dog_that_exists_returns_dog_id()
     {
         // arrange
-        DogHandler cut = new DogHandler( itsDogRepo );
+        DogService cut = new DogService( itsDogRepo );
         Dog theDog = new Dog();
         theDog.setName("Bruno");
         cut.addDog( theDog );
